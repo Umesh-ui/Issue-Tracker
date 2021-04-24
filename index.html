@@ -1,0 +1,67 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+            <title>Issue Tracker</title>
+        </head>
+        <body onload="fetchIssues()">
+            <div class="container">
+            <h1 style="text-align: center;">Issue Tracker <small style="font-size: 16px;">by umesh </small></h1>
+            <div class="jumbotron" style="background-color: rgb(214, 187, 187); padding: 20px;">
+                <h3>Add New Issue</h3>
+                <form  id="issueInputForm" >
+
+                    <div class="form-group">
+                        <label for="issueDescriptionInput">Desription</label>
+                        <input type="text" name="" class="form-control" id="issueDescInput" placeholder="Describe your issue">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="severityInput">Severity</label>
+
+                        <select id="issueType" class="form-control">
+                            <option value="default">---Select Severity---</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="issueAssignedToInput">Assigned To</label>
+                        <input type="text" name="" class="form-control" id="issueAssignedToInput" placeholder="Enter Responsible...">
+                    </div><br>
+
+                    <button type="submit" class="btn btn-primary">Add </button>
+                </form>
+            </div><br>
+            <div class="col-lg-12">
+                <div id="issueList">
+
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy Umesh Itukade</p>
+            </div>
+
+        </div>
+
+
+
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+                <!-- jqury cdn -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+                <!-- chance js for random number generation-->
+                <script src="https://chancejs.com/chance.min.js"></script>
+            <script src="./main.js"></script>
+        </body>
+        </html>
